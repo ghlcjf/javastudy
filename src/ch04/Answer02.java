@@ -55,7 +55,7 @@ public class Answer02 {
 		System.out.println("");
 		// 15. 1+(-2)+3+(-4)+...같은 식으로 더해 나갔을 때 
 		// 총합이 몇까지 더해야 100 이상이 되는 지 구하세요.
-		int sum_5=0;
+		int sum_5 = 0;
 		int s = 1;
 		int num_5 = 0;
 		
