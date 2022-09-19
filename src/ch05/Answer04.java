@@ -11,6 +11,7 @@ public class Answer04 {
 		
 		Random r = new Random();
 		
+<<<<<<< HEAD
 //		int[] arr = new int[3];
 //		
 //		for(int i = 0;i<arr.length;i++) {
@@ -35,15 +36,30 @@ public class Answer04 {
 		for(int i=0;i<arr.length;i++) {
 			arr[i] = r.nextInt(9)+1;
 			for(int j=0;j<i;j++) {
+=======
+		int[] arr = new int[3];
+		
+		for(int i = 0;i<arr.length;i++) {
+			arr[i] = r.nextInt(9)+1;
+			for(int j = 0;j<i;j++) {
+>>>>>>> 03e9fc6d258acb65a035a7daff6079aeb1411a0e
 				if(arr[i]==arr[j]) {
 					i--;
 					break;
 				}
 			}
 		}
+<<<<<<< HEAD
 		
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(""+arr[i]);
+=======
+		System.out.println(""+arr[0]+arr[1]+arr[2]);
+		
+		
+		for(int i = 0;i<arr.length;i++) {
+			System.out.print(arr[i]);
+>>>>>>> 03e9fc6d258acb65a035a7daff6079aeb1411a0e
 		}
 		
 		
@@ -54,6 +70,7 @@ public class Answer04 {
 		
 		
 		
+<<<<<<< HEAD
 		
 		
 		
@@ -81,6 +98,8 @@ public class Answer04 {
 		
 		
 		
+=======
+>>>>>>> 03e9fc6d258acb65a035a7daff6079aeb1411a0e
 
 	}
 
