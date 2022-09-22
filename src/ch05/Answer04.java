@@ -12,21 +12,43 @@ public class Answer04 {
 		Random r = new Random();
 		
 
-		int[] arr = new int[3];
+//		int[] arr = new int[3];
+//		
+//		for(int i = 0;i<arr.length;i++) {
+//			arr[i] = r.nextInt(9)+1;
+//			for(int j = 0;j<i;j++) {
+//				if(arr[i]==arr[j]) {
+//					i--;
+//					break;
+//				}
+//			}
+//		}
+//		System.out.println(""+arr[0]+arr[1]+arr[2]);
+//		
+//		
+//		for(int i = 0;i<arr.length;i++) {
+//			System.out.print(arr[i]);
+//		}
 		
-		for(int i = 0;i<arr.length;i++) {
-			arr[i] = r.nextInt(9)+1;
-			for(int j = 0;j<i;j++) {
-				if(arr[i]==arr[j]) {
-					i--;
-					break;
-				}
-			}
-		}
-		System.out.println(""+arr[0]+arr[1]+arr[2]);
+
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
 	}
 
 }
