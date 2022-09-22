@@ -32,8 +32,9 @@ public class Answer05_1 {
 				x+=arr[i];
 			
 			
-			return x;
+			
 			}
+			return x;
 	}
 
 }
