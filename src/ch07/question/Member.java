@@ -5,6 +5,7 @@ public class Member {
 	private String userPw = null;
 	private String name = null;
 	private String phone =null;
+	private int login = 0;
 	
 	public String getUserId() {
 		return userId;
@@ -43,6 +44,13 @@ public class Member {
 		System.out.println("이름 : "+this.name);
 		System.out.println("전화번호 : "+this.phone);
 	}
+	public int getLogin() {
+		return login;
+	}
+	public void setLogin(int login) {
+		this.login = login;
+	}
+	
 	
 	
 	
