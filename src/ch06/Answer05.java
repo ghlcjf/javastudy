@@ -30,7 +30,7 @@ public class Answer05 {
 
 	private static int maxnum(int[] arr) {
 		
-		if(num==0) {
+		if(num==0 || arr==null) {
 			System.out.println("-99999");
 			System.exit(0);
 		}

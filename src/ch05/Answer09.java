@@ -13,13 +13,42 @@ public class Answer09 {
 				{40,40,40,40,40},
 				{50,50,50,50,50}
 		};
-		
-		
+		int sum = 0;
+		int sum_2 = 0;
 		int[][] newarr = new int[6][6];
 		
-		System.arraycopy(oldarr, 0, newarr, 0, oldarr.length);
+		for(int i=0;i<newarr.length;i++) {
+			sum_2 = 0;
+			for(int j=0;j<newarr[i].length;j++) {
+				if(j<oldarr.length) {
+					newarr[i][j]=oldarr[i][j];
+					sum_2+=newarr[i][j];
+				}else {
+					newarr[i][j]=sum_2;
+					break;
+				}
+				
+			}
+//			for(int j=0;j<newarr[i].length;j++) {
+//				if(i<newarr.length) {
+//					sum+=newarr[j][i];
+//				}else {
+//					newarr[j][i]=sum;
+//					break;
+//				}
+//			}
+			
+			
+			
+		}
 		
+//		for(int i=0;i<newarr.length;i++) {
+//			
+//			
+//			
+//		}
 		
+		System.out.println(newarr[0][5]);
 		
 		
 		

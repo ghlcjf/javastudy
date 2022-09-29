@@ -110,9 +110,13 @@ public class Answer09 {
 				scores[i][j] = Integer.parseInt(in.nextLine());
 				sum += scores[i][j];
 			}
-			scores[i][3] = sum;
-			avg[i]=scores[i][3]/3.0;
+			
+			scores[i][3] = sum; // 총점
+			
+			avg[i]=scores[i][3]/3.0; // 평균
+			
 			sum=0;
+			
 			for(int j=0;j<i;j++) {
 				if(avg[i]>avg[j]) {
 					rank[j]++;
