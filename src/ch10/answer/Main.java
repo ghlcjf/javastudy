@@ -1,4 +1,4 @@
-package ch07.question_02;
+package ch10.answer;
 
 public class Main {
 	public static void main(String[] args) {
