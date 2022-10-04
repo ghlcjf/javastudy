@@ -15,10 +15,10 @@ public class Controller {
 			
 			switch(num) {
 			case 1:
-				View.signUp();
+//				View.signUp();
 				break;
 			case 2:
-				View.signIn();
+//				View.signIn();
 				break;
 			case 3:
 				if(View.programExit()) {

@@ -46,9 +46,15 @@ public class Controller {
 		}
 	}
 
-	private void task(Task task) {
+	private void task(Member member) {
 		// TODO Auto-generated method stub
-		task.work();
-		task.test();
+		member.work();
+		member.test();
 	}
+
+//	private void task(Task task) {
+//		// TODO Auto-generated method stub
+//		task.work();
+//		task.test();
+//	}
 }
