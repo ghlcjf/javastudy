@@ -173,7 +173,7 @@ public class Answer06 {
 		System.out.println("점수 정보를 입력하실 인원 수를 입력해 주세요.");
 		int people = Integer.parseInt(in.nextLine());
 		
-		for(int i=0;i<people;i++) {
+		for(int i=0;i<people;i++) { // people만큼 점수 입력하기 위해 반복문
 			System.out.println("이름을 입력해 주세요.");
 			String name = in.nextLine();
 			System.out.println("국어 점수를 입력해 주세요.");
@@ -184,11 +184,16 @@ public class Answer06 {
 			int math = Integer.parseInt(in.nextLine());
 			
 			sList.add(new Student(name,new int[] {kor,eng,math}));
+			// 이걸 나눠서 적으면
+//			int[] score = new int[] {kor,eng,math};
+//			Student s = new Student(name,new int[]{kor,eng,math});
+//			sList.add(s);
 		}
 		run=true;
-		System.out.println(sList.size());
 		
-	}
+		System.out.println(sList.size());// 점수 들어갔는지 확인용 출력문
+		
+		}
 	
 	
 	private static void programExit() {

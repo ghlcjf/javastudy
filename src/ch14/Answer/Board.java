@@ -5,6 +5,16 @@ public class Board {
 	private String writer;
 	private String content;
 	private String password;
+	private int indexNum;
+	
+	
+	
+	public int getIndexNum() {
+		return indexNum;
+	}
+	public void setIndexNum(int indexNum) {
+		this.indexNum = indexNum;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -29,6 +39,18 @@ public class Board {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public Board(String title, String writer, String content, String password, int indexNum) {
+		super();
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+		this.password = password;
+		this.indexNum = indexNum;
+	}
+	
+	
+	
+	
 	public Board(String title, String writer, String content, String password) {
 		super();
 		this.title = title;
@@ -36,7 +58,6 @@ public class Board {
 		this.content = content;
 		this.password = password;
 	}
-	
 	public void prt() {
 		System.out.println("--------------------------------");
 		System.out.println("제목 : "+this.title);
