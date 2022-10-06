@@ -1,4 +1,4 @@
-package ch14;
+package ch14.Answer;
 
 import java.util.Map;
 import java.util.Scanner;
