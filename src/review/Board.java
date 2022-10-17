@@ -6,7 +6,15 @@ public class Board {
 	private String writer;
 	private String content;
 	private String password;
+	private int writeNum;
 	
+	
+	public int getWriteNum() {
+		return writeNum;
+	}
+	public void setWriteNum(int writeNum) {
+		this.writeNum = writeNum;
+	}
 	public String getTitle() {
 		return title;
 	}
@@ -40,6 +48,13 @@ public class Board {
 	}
 	
 	
+	public Board(String title, String writer, String content, int writeNum) {
+		super();
+		this.title = title;
+		this.writer = writer;
+		this.content = content;
+		this.writeNum = writeNum;
+	}
 	public void prt() {
 		System.out.println("---------------------------------");
 		System.out.println("제목 : "+this.title);
@@ -48,6 +63,7 @@ public class Board {
 		System.out.println("---------------------------------");
 		
 	}
+	
 	
 	
 }

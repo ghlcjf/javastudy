@@ -61,7 +61,12 @@ public class Ex05_3_Review {
 			write();
 			break;
 		case 2:
-			readBoard();
+			if(bl.isEmpty()) {
+				System.out.println("게시글이 없습니다.");
+			}else {
+				readBoard();
+			}
+			
 			break;
 		case 3:
 			signOut();
@@ -77,7 +82,16 @@ public class Ex05_3_Review {
 	}
 	private static void write() {
 		// TODO Auto-generated method stub
+		System.out.println("글 작성하기");
+		System.out.println("글 제목을 입력해 주세요");
+		String title = in.nextLine();
 		
+		System.out.println("글 내용을 입력해 주세요");
+		String content = in.nextLine();
+		
+		
+		bl.add(new Board(title,ml.get(login).getName(),content,login));
+		System.out.println("게시글 등록이 완료되었습니다.");
 	}
 	private static void signOut() {
 		// TODO Auto-generated method stub
@@ -173,7 +187,38 @@ public class Ex05_3_Review {
 			System.out.println("상세보기를 원하면 글 번호를, 아니면 0을 입력해 주세요");
 			int num = Integer.parseInt(in.nextLine())-1;
 			if(0<=num&&num<bl.size()) {
-				bl.get(num).prt();
+				if(bl.get(num).getWriteNum()==login) {
+					bl.get(num).prt();
+					System.out.println("수정이나 삭제하시겠습니까?(Y/N)");
+					//여기부터 다시
+					String ans = in.nextLine();
+					if(ans.equalsIgnoreCase("Y")) {
+						System.out.println("1. 수정 | 2. 삭제 | 3. 이전 메뉴");
+						int selNum = Integer.parseInt(in.nextLine());
+						
+						switch(selNum) {
+						case 1:
+							modify(num);
+							break;
+						case 2:
+							delete(num);
+							break;
+						case 3:
+							System.out.println("이전 메뉴로 돌아갑니다.");
+							break;
+						default:
+							selectError();
+						}
+					}else if(ans.equalsIgnoreCase("N")) {
+						System.out.println("이전 메뉴로 돌아갑니다.");
+					}else {
+						selectError();
+					}
+					
+				}else {
+					bl.get(num).prt();
+				}
+				
 			}else if(num==-1) {
 				System.out.println("이전 메뉴로 돌아갑니다.");
 			}else {
@@ -183,6 +228,29 @@ public class Ex05_3_Review {
 		}
 		
 		
+		
+	}
+	
+	private static void delete(int num) {
+		// 삭제
+		System.out.println("정말 삭제하시겠습니까?(Y/N)");
+		String ans = in.nextLine();
+		if(ans.equalsIgnoreCase("Y")) {
+			bl.remove(num);
+			System.out.println("삭제가 완료되었습니다.");
+		}else if(ans.equalsIgnoreCase("N")) {
+			System.out.println("이전 메뉴로 돌아갑니다.");
+		}else {
+			selectError();
+		}
+	}
+	private static void modify(int num) {
+		// 수정
+		System.out.println("수정하실 글 내용을 입력해 주세요.");
+		String content = in.nextLine();
+		bl.get(num).setContent(content);
+		System.out.println("글 수정이 완료되었습니다.");
+		bl.get(num).prt();
 		
 	}
 	private static void signIn() {
