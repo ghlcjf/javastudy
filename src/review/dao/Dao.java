@@ -7,6 +7,7 @@ public class Dao {
 	private Dao() {}
 	
 	private static Dao dao = new Dao();
+	
 	public static Dao getInstance() {
 		return dao;
 	}
