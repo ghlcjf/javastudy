@@ -34,6 +34,10 @@ public class Board {
 		System.out.println("---------------------------------");
 	}
 	public Board(String title, String writer, String content) {
+<<<<<<< HEAD
+		super();
+=======
+>>>>>>> 5d7ea735e46a7096ed97e64e9d753ba26dcd5ed8
 		this.title = title;
 		this.writer = writer;
 		this.content = content;

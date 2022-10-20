@@ -7,7 +7,10 @@ public class Dao {
 	private Dao() {}
 	
 	private static Dao dao = new Dao();
+<<<<<<< HEAD
+=======
 	
+>>>>>>> 5d7ea735e46a7096ed97e64e9d753ba26dcd5ed8
 	public static Dao getInstance() {
 		return dao;
 	}
